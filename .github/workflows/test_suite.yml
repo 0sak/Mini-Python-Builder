@@ -9,7 +9,7 @@ jobs:
     name: Testing C-Runtime
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
