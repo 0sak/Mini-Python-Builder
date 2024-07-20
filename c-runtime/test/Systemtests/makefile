@@ -1,6 +1,6 @@
 CC := g++
 
-CXXFLAGS ?= -std=c++17
+CXXFLAGS ?= -std=c++14
 
 RUNDECLA := /test/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.out
 RUNARITOPS := /test/Systemtests/ArithmeticOps/TestArithmeticOps.out
