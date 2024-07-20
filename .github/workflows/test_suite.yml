@@ -9,7 +9,7 @@ jobs:
     name: Testing C-Runtime
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [macos-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -19,7 +19,7 @@ jobs:
         run: make clean
       - name: Exec makefile
         working-directory: ./c-runtime
-        run: make test_target
+        run: make test
       - name: Clean Up
         working-directory: ./c-runtime
         run: make test_clean ; make clean
