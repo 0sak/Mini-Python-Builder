@@ -49,7 +49,7 @@ endif
 # Default g++ Flags #
 #####################
 
-#CXXFLAGS ?=
+CXXFLAGS ?= -std=c++17
 
 ###########
 # Targets #

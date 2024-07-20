@@ -1,5 +1,7 @@
 CC := g++
 
+CXXFLAGS ?= -std=c++17
+
 RUNDECLA := /test/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.out
 RUNARITOPS := /test/Systemtests/ArithmeticOps/TestArithmeticOps.out
 RUNCOMPOPS := /test/Systemtests/ComparisonOps/TestComparisonOps.out
