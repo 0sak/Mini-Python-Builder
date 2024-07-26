@@ -1,4 +1,4 @@
-CC := g++
+CC := clang
 
 CXXFLAGS ?= -std=c++14
 
