@@ -133,11 +133,11 @@ test_run:
 .PHONY: test_target
 test_target: curl_catch
 	d=$$(date +%s)\
-	; 	make -f $(TESTDIR)/Systemtests/makefile test_function_params \
+	; 	make -f $(TESTDIR)/Systemtests/makefile test_declaration_and_assignment \
 	&& echo "Build took $$(($$(date +%s)-d)) seconds"
 	make run_target
 	make test_clean
 
 .PHONY: run_target
 run_target:
-	./test/Systemtests/FunctionCalls/TestFunctionParams.out
+	./test/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.out
