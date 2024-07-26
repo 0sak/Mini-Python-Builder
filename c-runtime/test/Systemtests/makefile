@@ -8,7 +8,6 @@ ifeq ($(UNAME_S),Linux)
 	CC := g++
 	CCFLAGS += -D LINUX
 endif
-endif
 
 RUNDECLA := /test/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.out
 RUNARITOPS := /test/Systemtests/ArithmeticOps/TestArithmeticOps.out
