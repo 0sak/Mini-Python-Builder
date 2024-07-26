@@ -2,12 +2,13 @@ UNAME := $(shell uname)
 
 ifeq ($(UNAME_S),Darwin)
 	CC := g++-13
+	CCFLAGS += -D OSX
 endif
 ifeq ($(UNAME_S),Linux)
 	CC := g++
+	CCFLAGS += -D LINUX
 endif
-
-CXXFLAGS ?= -std=c++14
+endif
 
 RUNDECLA := /test/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.out
 RUNARITOPS := /test/Systemtests/ArithmeticOps/TestArithmeticOps.out
