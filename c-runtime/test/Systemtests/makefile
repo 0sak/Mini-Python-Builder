@@ -1,4 +1,11 @@
-CC := g++-13
+UNAME := $(shell uname)
+
+ifeq ($(UNAME_S),Darwin)
+	CC := g++-13
+endif
+ifeq ($(UNAME_S),Linux)
+	CC := g++
+endif
 
 CXXFLAGS ?= -std=c++14
 
@@ -65,6 +72,7 @@ echo:
 	@echo ${C_FILES}
 	@echo ${TESTDIR}
 	@echo ${RUN}
+	@echo $(UNAME)
 
 test_declaration_and_assignment:
 	$(CC) -I $(INCLUDEDIR) -I $(INCLUDEDIRTEST) -o $(TESTDIR)/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.out -w -fpermissive $(TESTDIR)/Systemtests/DeclarationAndAssignment/TestDeclarationAndAssignment.c* $(C_FILES_TEST) $(C_FILES)
