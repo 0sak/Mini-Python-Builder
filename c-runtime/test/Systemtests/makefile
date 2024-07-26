@@ -158,7 +158,6 @@ test_class_inheritance:
 test_wuppie:
 	$(CC) -I $(INCLUDEDIR) -I $(INCLUDEDIRTEST) -o $(TESTDIR)/Systemtests/wuppie.out -w -fpermissive $(TESTDIR)/Systemtests/wuppie.c* $(C_FILES_TEST) $(C_FILES)
 
-
 clean:
 	$(RM) -r $(TESTDIR)/*.out
 	$(RM) -r $(TESTDIR)/*/*/*.out

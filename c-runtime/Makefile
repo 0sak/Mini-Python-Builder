@@ -49,8 +49,6 @@ endif
 # Default g++ Flags #
 #####################
 
-CXXFLAGS ?= -std=c++14
-
 ###########
 # Targets #
 ###########
